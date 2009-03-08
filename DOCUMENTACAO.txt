@@ -39,3 +39,10 @@ GET http://localhost:4567/encomenda/ES446391025BR
     <detalhes></detalhes>
   </status>
 </encomenda>
+
+------
+
+Outros números de encomenda para teste:
+- RO811226537BR
+- EC834786906BR
+- SO376590583BR
