@@ -1,0 +1,41 @@
+API de webservices REST para os correios. Esta API faz requests e parse no HTML do site dos correios para fornecer informações sobre encomendas.
+
+Exemplo:
+
+GET http://localhost:4567/encomenda/ES446391025BR
+
+--- retorna ---
+
+<? xml encoding="UTF-8" version="1.0" ?>
+<encomenda numero="ES446391025BR">
+  <status data="2009-01-27T16:35:00+00:00">
+    <local>ACF FENIX - ITAPECERICA DA SERRA/SP</local>
+    <situacao>Postado</situacao>
+    <detalhes></detalhes>
+  </status>
+  <status data="2009-01-27T18:51:00+00:00">
+    <local>ACF FENIX - ITAPECERICA DA SERRA/SP</local>
+    <situacao>Encaminhado</situacao>
+    <detalhes>Em trânsito para CTE JAGUARE - SAO PAULO/SP</detalhes>
+  </status>
+  <status data="2009-01-28T03:36:00+00:00">
+    <local>CTE JAGUARE - SAO PAULO/SP</local>
+    <situacao>Encaminhado</situacao>
+    <detalhes>Encaminhado para CTE SAUDE - SAO PAULO/SP</detalhes>
+  </status>
+  <status data="2009-01-28T06:40:00+00:00">
+    <local>CTE SAUDE - SAO PAULO/SP</local>
+    <situacao>Encaminhado</situacao>
+    <detalhes>Encaminhado para CEE MOEMA - SAO PAULO/SP</detalhes>
+  </status>
+  <status data="2009-01-28T14:17:00+00:00">
+    <local>CEE MOEMA - SAO PAULO/SP</local>
+    <situacao>Saiu para entrega</situacao>
+    <detalhes></detalhes>
+  </status>
+  <status data="2009-01-28T17:49:00+00:00">
+    <local>CEE MOEMA - SAO PAULO/SP</local>
+    <situacao>Entregue</situacao>
+    <detalhes></detalhes>
+  </status>
+</encomenda>
