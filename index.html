@@ -99,7 +99,31 @@ end
 {% endhighlight %}
     </p>
     <p>
-        Para mais instruções de uso veja os arquivos "DOCUMENTACAO.txt" e "exemplo_de_uso.rb".
+      Para usar a API REST, digite:
+      <pre>$ correios-api</pre>
+    <p>
+      Este comando irá iniciar a API REST na port 4567. Basta acessar o recurso "encomenda" informando o núnero de restreamento para obter as informações:
+      <pre>GET http://localhost:4567/encomenda/ES446391025BR HTTP/1.1</pre>
+    </p>
+    <p>
+      O GET irá retornar um XML conforme abaixo:
+      <pre><? xml encoding="UTF-8" version="1.0" ?>
+<encomenda numero="ES446391025BR">
+  <status data="2009-01-27T16:35:00+00:00">
+    <local>ACF FENIX - ITAPECERICA DA SERRA/SP</local>
+    <situacao>Postado</situacao>
+    <detalhes></detalhes>
+  </status>
+  <status data="2009-01-27T18:51:00+00:00">
+    <local>ACF FENIX - ITAPECERICA DA SERRA/SP</local>
+    <situacao>Encaminhado</situacao>
+    <detalhes>Em trânsito para CTE JAGUARE - SAO PAULO/SP</detalhes>
+  </status>
+  ...
+</encomenda></pre>
+    </p>
+    <p>
+      Para mais instruções de uso veja os arquivos "DOCUMENTACAO.txt" e "exemplo_de_uso.rb".
     </p>
 
     <br />
