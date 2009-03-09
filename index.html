@@ -1,1 +1,108 @@
-My GitHub Page
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
+	<title>guilhermechapiewski/correios-api @ GitHub</title>
+	
+	<style type="text/css">
+		body {
+  		margin-top: 1.0em;
+  		background-color: #CCCCCC;
+		  font-family: "helvetica"; 
+  		color: #000000;
+    }
+    #container {
+      margin: 0 auto;
+      width: 700px;
+    }
+		h1 { font-size: 3.0em; color: #1b3b93; margin-bottom: 3px; }
+		h1 .small { font-size: 0.4em; }
+		h1 a { text-decoration: none }
+		h2 { font-size: 1.5em; color: #1b3b93; }
+    h3 { text-align: center; color: #1b3b93; }
+    a { color: #1b3b93; }
+    .description { font-size: 1.2em; margin-bottom: 30px; margin-top: 30px; font-style: italic;}
+    .download { float: right; }
+		pre { background: #000; color: #fff; padding: 15px;}
+    hr { border: 0; width: 80%; border-bottom: 1px solid #aaa}
+    .footer { text-align:center; padding-top:30px; font-style: italic; }
+	</style>
+	
+</head>
+
+<body>
+  <a href="http://github.com/guilhermechapiewski/correios-api"><img style="position: absolute; top: 0; right: 0; border: 0;" src="http://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub" /></a>
+  
+  <div id="container">
+
+    <div class="download">
+      <a href="http://github.com/guilhermechapiewski/correios-api/zipball/master">
+        <img border="0" width="90" src="http://github.com/images/modules/download/zip.png"></a>
+      <a href="http://github.com/guilhermechapiewski/correios-api/tarball/master">
+        <img border="0" width="90" src="http://github.com/images/modules/download/tar.png"></a>
+    </div>
+      
+    <h1><a href="http://github.com/guilhermechapiewski/correios-api">correios-api</a> 
+      <span class="small">by <a href="http://github.com/guilhermechapiewski">Guilherme Chapiewski</a></small></h1>
+
+    <div class="description">
+        <b>correios-api</b> é uma API para acessar informações de rastreamento de pacotes dos Correios</a>.
+        <br /> <br />
+        Você pode usar a API tanto como um uma RubyGem para projetos Ruby ou como um webservice REST para usar as informações em 
+        outras linguagens diferentes de Ruby.
+    </div>
+
+    <h2>Download</h2>
+    <p>
+      A forma mais fácil de usar a API é instalar o Gem direto do Github: 
+      <pre>$ gem sources -a http://gems.github.com</pre>
+      <pre>$ sudo gem install guilhermechapiewski-correios-api</pre>
+    </p>
+    <p>
+      Você também pode baixar o projeto no formato 
+      <a href="http://github.com/guilhermechapiewski/correios-api/zipball/master">zip</a> ou
+      <a href="http://github.com/guilhermechapiewski/correios-api/tarball/master">tar</a> se quiser instalar manualmente.
+    </p>
+    <p>E por último, você também pode clonar o projeto usando <a href="http://git-scm.com">Git</a>, executando:
+      <pre>$ git clone git://github.com/guilhermechapiewski/correios-api</pre>
+    </p>
+    
+    <h2>Instruções</h2>
+    <p>
+        <pre>require "rubygems"
+        require "correios"
+
+        # obtendo as informacoes de uma encomenda
+        encomenda = Correios.encomenda("ES446391025BR")
+
+        puts "Encomenda: #{encomenda.numero}"
+        puts
+        encomenda.status.each do |status|
+          puts " data: #{status.data}"
+          puts " local: #{status.local}"
+          puts " situacao: #{status.situacao}"
+          puts " detalhes: #{status.detalhes}"
+          puts
+        end</pre>
+    </p>
+    <p>
+        Para mais instruções de uso veja os arquivos "DOCUMENTACAO.txt" e "exemplo_de_uso.rb".
+    </p>
+
+    <h2>Developement</h2>
+    <p>
+        <b>correios-api</b> é um projeto open-source desenvolvido por <a href="http://gc.blog.br">Guilherme Chapiewski</a> sob a licensa <a href="http://www.apache.org/licenses/LICENSE-2.0.html">Apache License 2.0</a>. É desenvolvido inteiramente em Ruby no Mac OS X com <a href="http://macromates.com/">Textmate</a>, usando os frameworks <a href="http://www.sinatrarb.com/">Sinatra</a> e <a href="http://wiki.github.com/why/hpricot">hpricot</a>.
+    </p>
+    
+    <div class="footer">
+      baixe o código fonte no GitHub : <a href="http://github.com/guilhermechapiewski/correios-api">guilhermechapiewski/correios-api</a>
+    </div>
+    
+  </div>
+
+  
+</body>
+</html>
