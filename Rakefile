@@ -23,7 +23,7 @@ end
 namespace :gem do
   desc "Faz o build do gem."
   task :build do
-    system "gem build correios-api.spec"
+    system "gem build correios-api.gemspec"
   end
 
   desc "Instala todas as gems que a correios-api depende."
