@@ -48,6 +48,7 @@ GET http://localhost:4567/encomenda/ES446391025BR
 =================
 USANDO A API RUBY
 =================
+require "rubygems"
 require "correios"
 
 # obtendo as informacoes de uma encomenda
