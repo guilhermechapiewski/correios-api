@@ -1,6 +1,8 @@
-API de webservices REST para os correios. Esta API faz requests e parse no HTML do site dos correios para fornecer informações sobre encomendas.
+API de webservices REST e Ruby para rastrear encomendas dos Correios. Esta API faz requests e parse no HTML do site dos correios para fornecer informações sobre encomendas.
 
-Exemplo:
+=================
+USANDO A API REST
+=================
 
 GET http://localhost:4567/encomenda/ES446391025BR
 
@@ -40,7 +42,31 @@ GET http://localhost:4567/encomenda/ES446391025BR
   </status>
 </encomenda>
 
-------
+
+=================
+USANDO A API RUBY
+=================
+require "correios"
+
+# obtendo as informacoes de uma encomenda
+encomenda = Correios.encomenda("ES446391025BR")
+
+puts encomenda.numero
+encomenda.status.each do |status|
+  puts status.data
+  puts status.local
+  puts status.situacao
+  puts status.detalhes
+end
+
+# outra forma de uso útil
+encomenda = Correios.encomenda("ES446391025BR")
+puts encomenda.ultimo_status_disponivel.to_s
+
+
+========
+TESTANDO
+========
 
 Outros números de encomenda para teste:
 - RO811226537BR
