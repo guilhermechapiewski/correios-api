@@ -45,7 +45,7 @@
         <img border="0" width="90" src="http://github.com/images/modules/download/tar.png"></a>
     </div>
       
-    <h1><a href="http://github.com/guilhermechapiewski/correios-api">correios-api</a> 
+    <h1><a href="http://github.com/guilhermechapiewski/correios-api">correios-api</a> <br />
       <span class="small">by <a href="http://http://gc.blog.br">Guilherme Chapiewski</a></small></h1>
 
     <div class="description">
@@ -71,7 +71,8 @@ $ sudo gem install guilhermechapiewski-correios-api</pre>
     
     <h2>Instruções</h2>
     <p>
-        <pre lang="ruby">require "rubygems"
+{% highlight ruby linenos %}
+require "rubygems"
 require "correios"
 
 # obtendo as informacoes de uma encomenda
@@ -85,7 +86,8 @@ encomenda.status.each do |status|
   puts " situacao: #{status.situacao}"
   puts " detalhes: #{status.detalhes}"
   puts
-end</pre>
+end
+{% endhighlight %}
     </p>
     <p>
         Para mais instruções de uso veja os arquivos "DOCUMENTACAO.txt" e "exemplo_de_uso.rb".
