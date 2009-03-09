@@ -17,7 +17,7 @@ end
 
 desc "Inicia a API de webservices REST."
 task :api do
-  system "cd lib; ruby api.rb"
+  system "cd lib; ruby correios_rest_api.rb"
 end
 
 namespace :gem do
