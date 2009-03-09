@@ -1,0 +1,2 @@
+#!/bin/sh
+ruby ../lib/correios_rest_api.rb

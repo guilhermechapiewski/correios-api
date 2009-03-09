@@ -1,4 +1,0 @@
-- Fazer um GEM.
-- Melhorar a documentação (especialmente dde como usar como API).
-- Separar a api.rb do resto (essa eh a parte de serviços).
-- Site do Github (?).

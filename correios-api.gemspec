@@ -9,8 +9,8 @@ Gem::Specification.new do |s|
   s.date = %q{2009-03-08}
   s.description = %q{API Ruby/REST para rastreamento de pacotes dos Correios.}
   s.email = %q{guilherme.chapiewski@gmail.com}
-  #s.executables = ["run"]
-  s.files = ["lib/api.rb", "lib/correios.rb", "lib/encomenda.rb", "lib/encomenda_status.rb"]
+  s.executables = ["correios-api"]
+  s.files = ["bin/correios-api", "lib/correios_rest_api.rb", "lib/correios.rb", "lib/encomenda.rb", "lib/encomenda_status.rb"]
   s.homepage = %q{http://github.com/guilhermechapiewski/correios-api}
   s.require_paths = ["lib"]
   s.rubyforge_project = %q{correios-api}
