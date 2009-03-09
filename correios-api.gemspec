@@ -2,11 +2,11 @@
  
 Gem::Specification.new do |s|
   s.name = %q{correios-api}
-  s.version = "0.1.1"
+  s.version = "0.1.2"
  
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Guilherme Chapiewski"]
-  s.date = %q{2009-03-08}
+  s.date = %q{2009-03-09}
   s.description = %q{API Ruby/REST para rastreamento de pacotes dos Correios.}
   s.email = %q{guilherme.chapiewski@gmail.com}
   s.executables = ["correios-api"]
