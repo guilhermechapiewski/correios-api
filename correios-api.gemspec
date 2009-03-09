@@ -13,6 +13,7 @@ Gem::Specification.new do |s|
   s.files = ["lib/api.rb", "lib/correios.rb", "lib/encomenda.rb", "lib/encomenda_status.rb"]
   s.homepage = %q{http://github.com/guilhermechapiewski/correios-api}
   s.require_paths = ["lib"]
+  s.rubyforge_project = %q{correios-api}
   s.rubygems_version = %q{1.3.1}
   s.summary = %q{API para rastreamento de pacotes dos Correios.}
    
