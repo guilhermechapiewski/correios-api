@@ -1,4 +1,6 @@
-API de webservices REST e Ruby para rastrear encomendas dos Correios. Esta API faz requests e parse no HTML do site dos correios para fornecer informações sobre encomendas.
+API de webservices REST e Ruby para rastrear encomendas dos Correios. 
+Esta API faz requests e parse no HTML do site dos correios para fornecer 
+informações sobre encomendas.
 
 =================
 USANDO A API REST
