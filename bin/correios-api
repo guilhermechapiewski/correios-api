@@ -1,2 +1,3 @@
-#!/bin/sh
-ruby ../lib/correios_rest_api.rb
+#!/usr/bin/env ruby
+require File.dirname(__FILE__) + "/../lib/correios_rest_api"
+Sinatra::Application.run!
