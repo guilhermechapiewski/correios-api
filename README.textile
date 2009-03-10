@@ -55,10 +55,8 @@ h2. Usando a API Ruby
 
   require "rubygems"
   require "correios"
-  
   encomenda = Correios.encomenda("ES446391025BR")
   puts encomenda.numero
-  
   encomenda.status.each do |status|
     puts status.data
     puts status.local
