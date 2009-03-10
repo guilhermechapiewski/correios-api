@@ -1,16 +1,19 @@
+.h1 correios-api
+
 correios-api é uma API de webservices REST e Ruby para rastrear encomendas dos Correios. 
 
 Esta API faz requests e parse no HTML do site dos correios para fornecer informações 
 sobre encomendas.
 
-=================
-USANDO A API REST
-=================
+.h2 Usando a API Rest
 
-GET http://localhost:4567/encomenda/ES446391025BR
+Se você acessar o endereço:
 
---- retorna ---
+  http://localhost:4567/encomenda/ES446391025BR
 
+Você receberá um XML com os dados da encomenda "ES446391025BR":
+
+<pre>
 <? xml encoding="UTF-8" version="1.0" ?>
 <encomenda numero="ES446391025BR">
   <status data="2009-01-27T16:35:00+00:00">
@@ -44,37 +47,34 @@ GET http://localhost:4567/encomenda/ES446391025BR
     <detalhes></detalhes>
   </status>
 </encomenda>
+</pre>
 
+.h2 Usando a API Ruby
 
-=================
-USANDO A API RUBY
-=================
-require "rubygems"
-require "correios"
+  require "rubygems"
+  require "correios"
+  
+  # obtendo as informacoes de uma encomenda
+  encomenda = Correios.encomenda("ES446391025BR")
+  
+  puts encomenda.numero
+  encomenda.status.each do |status|
+    puts status.data
+    puts status.local
+    puts status.situacao
+    puts status.detalhes
+  end
+  
+  # outra forma de uso útil
+  encomenda = Correios.encomenda("ES446391025BR")
+  puts encomenda.ultimo_status_disponivel.to_s
 
-# obtendo as informacoes de uma encomenda
-encomenda = Correios.encomenda("ES446391025BR")
-
-puts encomenda.numero
-encomenda.status.each do |status|
-  puts status.data
-  puts status.local
-  puts status.situacao
-  puts status.detalhes
-end
-
-# outra forma de uso útil
-encomenda = Correios.encomenda("ES446391025BR")
-puts encomenda.ultimo_status_disponivel.to_s
-
-
-==================================
-NÚMEROS DE RASTREAMENTO PARA TESTE
-==================================
+.h2 Números de rastreamento para teste
 
 Outros números de encomenda para teste:
-- RO811226537BR
-- EC834786906BR
-- SO376590583BR
-- EC884014459BR
-- EC726225124BR
+
+  RO811226537BR
+  EC834786906BR
+  SO376590583BR
+  EC884014459BR
+  EC726225124BR
