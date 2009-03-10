@@ -5,6 +5,8 @@ correios-api é uma API de webservices REST e Ruby para rastrear encomendas dos 
 Esta API faz requests e parse no HTML do site dos correios para fornecer informações 
 sobre encomendas.
 
+Para mais informações acesse o "site do projeto":http://guilhermechapiewski.github.com/correios-api.
+
 .h2 Usando a API Rest
 
 Se você acessar o endereço:
