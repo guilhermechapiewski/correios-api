@@ -56,10 +56,9 @@ h2. Usando a API Ruby
   require "rubygems"
   require "correios"
   
-  # obtendo as informacoes de uma encomenda
   encomenda = Correios.encomenda("ES446391025BR")
-  
   puts encomenda.numero
+  
   encomenda.status.each do |status|
     puts status.data
     puts status.local
@@ -67,7 +66,8 @@ h2. Usando a API Ruby
     puts status.detalhes
   end
   
-  # outra forma de uso útil
+Uutra forma de uso útil:
+
   encomenda = Correios.encomenda("ES446391025BR")
   puts encomenda.ultimo_status_disponivel.to_s
 
