@@ -66,7 +66,7 @@ h2. Usando a API Ruby
     puts status.detalhes
   end
   
-Uutra forma de uso útil:
+Outra forma de uso útil:
 
   encomenda = Correios.encomenda("ES446391025BR")
   puts encomenda.ultimo_status_disponivel.to_s
