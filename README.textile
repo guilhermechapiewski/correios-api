@@ -54,22 +54,24 @@ Você receberá um XML com os dados da encomenda "ES446391025BR":
 h2. Usando a API Ruby
 
 <pre>
-  require "rubygems"
-  require "correios"
-  encomenda = Correios.encomenda("ES446391025BR")
-  puts encomenda.numero
-  encomenda.status.each do |status|
-    puts status.data
-    puts status.local
-    puts status.situacao
-    puts status.detalhes
-  end
+require "rubygems"
+require "correios"
+encomenda = Correios.encomenda("ES446391025BR")
+puts encomenda.numero
+encomenda.status.each do |status|
+  puts status.data
+  puts status.local
+  puts status.situacao
+  puts status.detalhes
+end
 </pre>
   
 Outra forma de uso útil:
 
-  encomenda = Correios.encomenda("ES446391025BR")
-  puts encomenda.ultimo_status_disponivel.to_s
+<pre>
+encomenda = Correios.encomenda("ES446391025BR")
+puts encomenda.ultimo_status_disponivel.to_s
+</pre>
 
 h2. Números de rastreamento para teste
 
