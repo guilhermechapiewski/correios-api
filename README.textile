@@ -53,6 +53,7 @@ Você receberá um XML com os dados da encomenda "ES446391025BR":
 
 h2. Usando a API Ruby
 
+<pre>
   require "rubygems"
   require "correios"
   encomenda = Correios.encomenda("ES446391025BR")
@@ -63,6 +64,7 @@ h2. Usando a API Ruby
     puts status.situacao
     puts status.detalhes
   end
+</pre>
   
 Outra forma de uso útil:
 
