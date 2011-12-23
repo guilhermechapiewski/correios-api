@@ -1,3 +1,4 @@
+# encoding: UTF-8  
 class EncomendaStatus
   attr_accessor :data, :local, :situacao, :detalhes
   
