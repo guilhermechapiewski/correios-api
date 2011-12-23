@@ -4,6 +4,7 @@ require "hpricot"
 require "open-uri"
 require "encomenda"
 require "encomenda_status"
+require "date"
 
 class Correios
   @url = "http://websro.correios.com.br"
