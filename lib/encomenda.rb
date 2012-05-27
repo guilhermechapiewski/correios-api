@@ -1,3 +1,4 @@
+# encoding: UTF-8  
 class Encomenda
   attr_reader :numero, :status
   

@@ -1,5 +1,7 @@
-require 'spec/rake/spectask'
-require "rcov/rcovtask"
+# encoding: UTF-8
+# require 'spec/rake/spectask'
+# require "rcov/rcovtask"
+require 'rspec/core/rake_task'
  
 task :default => "test"
  
@@ -34,16 +36,16 @@ end
 
 namespace :test do
   desc "Executa todas as specs."
-  Spec::Rake::SpecTask.new(:spec) do |spec|
-    spec.spec_files = FileList["spec/**/*_spec.rb"]
+  RSpec::Core::RakeTask.new(:spec) do |t|
+    t.pattern = "spec/**/*_spec.rb"
   end
  
   desc "Gera relatórios de cobertura de testes e specs."
-  Spec::Rake::SpecTask.new(:coverage) do |rcov|
-    rcov.rcov = true
-    rcov.rcov_dir = "reports/coverage"
-    rcov.spec_opts = ["--format", "html:reports/specs/index.html", "--diff"]
-    rcov.fail_on_error = false
-    rcov.verbose = true
+  RSpec::Core::RakeTask.new(:coverage) do |t|
+    t.rcov = true
+    # t.rcov_dir = "reports/coverage"
+    t.rspec_opts = ["--format", "html:reports/specs/index.html", "--diff"]
+    t.fail_on_error = false
+    t.verbose = true
   end
 end

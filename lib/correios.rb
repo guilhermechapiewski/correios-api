@@ -1,15 +1,21 @@
+# encoding: UTF-8  
 require "rubygems"
 require "hpricot"
 require "open-uri"
+require 'iconv'
 require "encomenda"
 require "encomenda_status"
+require "date"
 
 class Correios
   @url = "http://websro.correios.com.br"
-  @url_rastreamento = "#{@url}/sro_bin/txect01$.QueryList?P_ITEMCODE=&P_LINGUA=001&P_TESTE=&P_TIPO=001&P_COD_UNI="
+  @url_rastreamento = "#{@url}/sro_bin/txect01$.QueryList?P_LINGUA=001&P_TIPO=001&P_COD_UNI="
   
   def self.encomenda(numero, url=@url_rastreamento)
-    html = Hpricot(open("#{url}#{numero}"))
+    page = open("#{url}#{numero}")
+    page.rewind    
+    html = Hpricot(Iconv.conv('utf-8', 'iso-8859-1', page.readlines.join("\n")))
+    # html = Hpricot(open("#{url}#{numero}"))
     encomenda = Encomenda.new(numero)
     
     pula_tr = true

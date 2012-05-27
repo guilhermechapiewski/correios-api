@@ -1,3 +1,4 @@
+# encoding: UTF-8  
 $LOAD_PATH << File.expand_path(File.dirname(__FILE__) + "/../lib")
 
 require "encomenda"
@@ -8,7 +9,7 @@ describe Encomenda do
       @encomenda = Encomenda.new("SS123456789BR")
 
       @status1 = EncomendaStatus.new
-      @status1.data = DateTime.parse("2009-01-27T16:35:00+00:00")
+      @status1.data = DateTime.parse('2009-01-27T16:35:00+00:00')
       @status1.local = "RIO DE JANEIRO"
       @status1.situacao = "Entregue"
       @status1.detalhes = "Entregue no dia tal"
